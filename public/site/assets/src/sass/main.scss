@@ -1,0 +1,251 @@
+/*
+*@author: Luiz Gustavo Rodrigues
+*@Agency: Uéb Studio Agencia Digital
+*@date: 13/07/2016
+*
+*/
+@import "global.scss";
+
+body{background: #F8F8F8;}
+.topo{margin-top: 0rem;}
+.navbar-default{background: transparent;border:0px;}
+.navbar-nav>li>a{
+    padding-top: 4.5rem;padding-bottom: 4.5rem;font-family: $roboto;
+    font-size: $bold !important;
+    color: $black !important;
+    font-size: 1.7rem;
+}
+.navbar-brand{padding-top: .5rem;padding-bottom: 1rem;}
+.navbar{margin-bottom: 0em;}
+ul {
+    &.contatos{
+        margin-bottom: 0;
+        margin-left: 0;    
+        margin-top: 0rem;
+        display: inline-block;    
+        li {
+            display: inline-block;
+            position:relative;
+            text-align: left;
+            float: left;
+            line-height: 1;
+            padding-top: 3.5rem;
+            padding-bottom: 3.5rem;
+            &:last-child {            
+                margin-right: 0;
+            }
+            a {
+                font-weight: $bold;
+                color: $darkgray;
+                font-size: 0.750rem;            
+                text-transform: uppercase
+            }
+            &.whatsapp {            
+                padding-left:5.125rem;
+                small { font-weight: $regular }
+                a {
+                    color: $red;
+                    font-weight: $bold;
+                    font-size: 1.125em;
+                    letter-spacing: 0em;
+                    font-family: $roboto;
+                }
+                &:before {
+                    content: '';
+                    width: 33px;
+                    height: 33px;
+                    background: url('#{$path}/icon-whatsapp.fw.png') center no-repeat;
+                    left: 0.8rem;                
+                    @include left();
+                    @include block();
+                    @include absolute();
+                }
+            }
+            &.telefone {            
+                padding-left:5.125rem;
+                small { font-weight: $regular }
+                a {
+                    color: #003366;
+                    font-weight: $bold;
+                    font-size: 1.125em;
+                    letter-spacing: 0em;
+                    font-family: $roboto;
+                }
+                &:before {
+                    content: '';
+                    width: 33px;
+                    height: 33px;
+                    background: url('#{$path}/icon-telefone.fw.png') center no-repeat;
+                    left: 0.8rem;                
+                    @include left();
+                    @include block();
+                    @include absolute();
+                }
+            }
+          
+            span {
+                font-size: 0.9em;
+                font-weight: $light;
+                line-height: 1.4;
+                color: #444444;                 
+                @include block();
+            }
+        }
+    }   
+}
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;    
+    background-image: url(../img/bg-header.png);
+    background-position: center;
+}
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.fundo-busca-imoveis{
+    width: 100%;
+    height: auto;
+    padding: 40px 0 30px;
+    background-image: url(../img/fundo-descricao-slide.png);
+    position: absolute;
+    z-index: 1;
+    .dropdown {
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        transition-duration: .5s;
+        select {
+            cursor: pointer;
+            box-shadow: none;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            padding-left: 0.5em;
+            padding-right: 0;   
+            padding-top:.2rem;
+            padding-bottom:.2rem;
+            height: 45px;
+            border:1px solid $gray;
+            font-size:1.2em !important;
+             transition-duration: .6s;
+            @include border-radius(0);
+            &:focus {
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+                box-shadow: none;
+                border-color: $red;
+                border-width: 2px;
+            }
+        }
+    }
+}
+
+.menu-index {
+    top: 300px;
+}
+
+.menu-busca {
+    top: 130px;
+}
+.busca-banner{
+	-moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    text-align: center;
+    min-width: 950px;
+}
+
+#content[role="home"] {
+
+    #venda-home{
+        h1{
+            font-family: $roboto;            
+            font-weight: $light;
+            color: $blue;
+            border-bottom:1px solid $gray;
+            padding-bottom:.2em;
+            margin-bottom: 3rem;
+            margin-top: 3rem;
+            span{
+                font-weight: $bold;
+            }
+        }
+        .item-home{
+            border:1px solid $gray;
+            padding:1rem;
+            p{
+                margin: 0 0 3px;
+            }
+            figure{
+                padding-bottom:1em;
+            }
+            .setor{
+                color: $darkgray;
+                font-size: 1.25em;
+                font-weight: $medium;
+            }
+            .preco{
+                color: $blue;
+                font-size: 1.25em;
+                font-weight: $bold;
+            }
+        }
+    }
+    
+}
+#content[role="imovel"] {
+    #detalhe-imovel{
+        padding: 2rem 0;
+        h1{
+            font-family: $roboto;            
+            font-weight: $light;
+            color: $blue;
+            border-bottom:1px solid $gray;
+            padding-bottom:.2em;
+            margin-bottom: 3rem;
+            span{
+                font-weight: $bold;
+            }
+        }
+        h3{
+            font-family: $roboto;            
+            font-weight: $bold; 
+            font-size: 1.5em;
+        }
+         p{
+            margin: 0 0 5px 0;
+        }
+    }
+}
+/* Small devices (tablets, 768px and up) */
+@media screen and (max-width: 39.9375em) {
+
+.navbar-nav>li>a{padding-top: 1rem;padding-bottom: 1rem;}
+.navbar-brand{padding-top: .5rem;padding-bottom: 1rem;}	
+}
+
+@media screen and (max-width: 63.9375em) {	
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {	
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (max-width: 64em) {	
+}

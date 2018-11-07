@@ -1,0 +1,124 @@
+@import "mixins.scss";
+/*===========================
+=            BEM            =
+===========================*/
+
+/*----------  EXTEND  ----------*/
+.absolute{position:absolute;}
+.fixed{position:fixed;}
+.relative{position:relative;}
+.overflow{overflow:hidden}
+.normal{font-weight: normal;}
+.uppercase{text-transform: uppercase;}
+.transparent{background:transparent;}
+.pointer{cursor:pointer;}
+.block{display:block;}
+.inline{display:inline;}
+.inlineb{display:inline-block;}
+.o-hidden{overflow:hidden;}
+.none{text-decoration: none;}
+.left{ float: left; }
+.right{ float: right !important; }
+.text-right{text-align: right;}
+.text-left{text-align: left;}
+.text-center{text-align: center;}
+.reset{margin: 0;padding: 0;}
+.no-margin-bottom{margin-bottom:0!important;}
+.no-margin{margin: 0!important}
+.no-padding{padding: 0!important}
+.no-padding-left{padding-left: 0!important}
+.no-padding-right{padding-right: 0!important}
+.padding-top-10{padding-top:1rem;}
+.padding-top-20{padding-top:2rem;}
+
+/*=====  End of BEM  ======*/
+/*----------  VARIABLES  ----------*/
+$path: "/imovel/public/site/assets/img";
+$font: "/fonts";
+/*----------  CORES  ----------*/
+$primary: #F16136;
+$white: #FFF;
+$black: #0a0a0a;
+$red: #b33333;
+$gray: #00661A;
+$secondary: #102053;
+//$secondary: #4d586d;
+$gray: #dadada;
+$yellow: #ffba00;
+$blue: #003366;
+$azul: #002e62;
+$darkgray: #505050;
+$yellow: #ffba00;
+$green: #8ac97a;
+
+/*----------  FONTS  ----------*/
+$opensans: 'Open Sans', sans-serif !important;
+$roboto: 'Roboto', sans-serif !important;
+$dosis: 'Dosis', sans-serif !important;
+$light: 300;
+$regular: 400;
+$medium:500;
+$bold: 700;
+$extrabold: 800;
+/*----------  GLOBAL  ----------*/
+body { background-color: $white; }
+body, p,
+h1, h2, h3, h4, h5, h6 {
+	font-family: $opensans;
+}
+
+footer{
+	padding: 3rem 0;
+	background:$gray;
+	border-top:3px solid $blue;
+	margin-top: 3em;
+	h5{
+		font-size: 1.6em;
+	}	
+	.fone{
+		font-size: 1.1em;
+	}
+	.endereco{
+		font-size: 1.1em;
+	}
+	.fa{
+		font-size: 2em;
+	}
+	ul{
+		padding-left:0;
+		li{
+			list-style-type: none;
+			a{
+				color:#333;
+			}
+		}
+	}
+}
+
+
+input[type="text"] , input[type="email"]  {
+	box-shadow: none;
+	background: $white !important;	
+	padding-left: 1em;
+	padding-right: 0;
+	
+	&:focus {
+		border-top: 1;
+		border-left: 1;
+		border-right: 1;
+		box-shadow: none;
+		border-color: $red;
+		border-width: 1px;
+	}
+}
+input[type="submit"]{
+	height:45px;
+	color:$white;
+	background:$blue;
+	font-size: $bold;
+	&:hover{
+		background:$blue;
+		color:$white;
+		font-size: $bold;
+	}
+}

@@ -1,0 +1,30 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius !important;
+	-moz-border-radius: $radius !important;
+	-ms-border-radius: $radius !important;
+	border-radius: $radius !important;
+}
+
+@mixin border-top-left-radius($topleft) {
+	border-top-left-radius: $topleft !important;
+	-webkit-border-top-left-radius: $topleft !important;
+	-moz-border-top-left-radius: $topleft !important;
+}
+
+@mixin border-top-right-radius($topright) {
+	border-top-right-radius: $topright !important;
+	-webkit-border-top-right-radius: $topright !important;
+	-moz-border-top-right-radius: $topright !important;
+}
+
+@mixin border-bottom-left-radius($bottomleft) {
+	border-bottom-left-radius: $bottomleft !important;
+	-webkit-border-bottom-left-radius: $bottomleft !important;
+	-moz-border-bottom-left-radius: $bottomleft !important;
+}
+
+@mixin border-bottom-right-radius($bottomright) {
+	border-bottom-right-radius: $bottomright !important;
+	-webkit-border-bottom-right-radius: $bottomright !important;
+	-moz-border-bottom-right-radius: $bottomright !important;
+}
